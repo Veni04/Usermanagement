@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Question Paper Generator</title>
+</head>
+<body>
+<div align="center">
+<form action="{% url 'paperGen' %}" method="post">
+{% csrf_token %}
+<h3>Generate Question Paper</h3>
+Enter Total Marks : <input id="totalmarks" name="totalmarks" type="number"><br><br>
+% of Diff Level : Easy<input id="easylevel" name="easylevel" type="number">
+    Medium<input id="mediumlevel" name="mediumlevel" type="number">
+    Hard<input id="hardlevel" name="hardlevel" type="number"><br><br>
+<input class="btn btn-primary" type="submit" value="submit">
+</form>
+</div>
+
+</body>
+</html>

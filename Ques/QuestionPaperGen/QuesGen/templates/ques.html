@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Question Paper Generator</title>
+</head>
+<body>
+<div align="center">
+<form action="{% url 'search' %}" method="post">
+{% csrf_token %}
+<h3>Add a Question For a Question Paper Generator </h3>
+Enter Question : <textarea id="ques" name="ques"></textarea><br><br>
+Enter Marks : <input id="marks" name="marks" type="number"><br><br>
+Enter Level : <select id="level" name="level">
+    <option value="easy">Easy</option>
+    <option value="medium">Medium</option>
+    <option value="hard">Hard</option>
+</select><br><br>
+<input class="btn btn-primary" type="submit" value="submit">
+</form>
+</div>
+
+</body>
+</html>
